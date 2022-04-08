@@ -2,5 +2,24 @@
     "rappi":{
         "baseUrl": "https://services.grability.rappi.com/api/ms/home/paginated?",
         "token": "ft.gAAAAABiTeAZW_nCp_atNkMUAVpNabFWr1I7fRX8B16pbZjXbdkFLQmY_r8VOGfPl4TMpnOCsdEOfy83ZTjibIu-LTijxwgrV0QMaPnRRuAYiLmTN7x-c6ZeL_CDeVelr_Afi4XcdtJsyYom03vwrp5iuDt5LRvSe45gRcNicJRksWD5RtAXIS31qIZmBOzL3HQihaAx5jSAbXILnJeTo0wmj-yTNXUqkJl7Syc8ptfbIU8p6ixGpsnzuYshrpqUg1tTXXDdV6wWqodmTsmWk8BEkfEvlI6v7PVVN1k3OtuxwILc-9C36JljglFs74WFF90X8il2ZUUvkgVoYWZT_IfvPUEh8kZl6NBpwsAZkxnQMcb__iM4D6s="
+    },
+    "foodology": {
+        "restaurantes": [{
+            "title": "Brunch & Munch"
+        },{
+            "title": "Avocalia"
+        },{
+            "title": "Bottaniko"
+        },{
+            "title": "La Cuadra"
+        },{
+            "title": "Cacerola"
+        },{
+            "title": "Burritos & Co"
+        },{
+            "title": "The Crunch"
+        },{
+            "title": "Wings Inda House"
+        }]
     }
 }

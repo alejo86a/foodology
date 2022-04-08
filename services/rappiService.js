@@ -1,5 +1,6 @@
 const axios = require('axios');
 const config = require("config");
+const fetch = require("node-fetch");
 
 class RappiService {
     headers = {
@@ -10,10 +11,11 @@ class RappiService {
 
     async getRestaurantes(latitude, longitude) {
 
-        const url = `${config.get("rappi.baseUrl")}lat=${latitude}&lng=${longitude}$view=web`;
+        const url = `${config.get("rappi.baseUrl")}lat=${latitude}&lng=${longitude}&view=web`;
 
 
-        return axios.get({ baseURL: "https://services.grability.rappi.com/api/ms/home/paginated?lat=6.238537599999999&lng=-75.55159689999999&view=web", headers: this.headers })
+        return fetch(url, { 
+            method: 'GET', headers: this.headers })
         .then((res) => {
            return res.json()
       });
