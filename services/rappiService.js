@@ -20,6 +20,10 @@ class RappiService {
            return res.json()
       });
     }
+
+    getRestaurantsByResponse(response){
+        return response.map(r => r.title);
+    }
 }
 
 module.exports = new RappiService();
