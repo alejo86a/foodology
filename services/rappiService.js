@@ -22,7 +22,8 @@ class RappiService {
     }
 
     getRestaurantsByResponse(response){
-        return response.map(r => r.title);
+        console.log('responseeee',response)
+        return response?.widgets[2]?.data?.map(r => r.title);
     }
 }
 

@@ -1,9 +1,9 @@
 const CheapRuler = require('cheap-ruler');
+const config = require("config");
 
 class MapService {
 
     getClosedPlaces(latitude, longitude, km) {
-        const kmToDegree = 1/111.1;
         const ruler = new CheapRuler(latitude, 'kilometers');
 
         const bbox = ruler.bufferPoint([latitude, longitude], km);
@@ -26,6 +26,19 @@ class MapService {
                 longitude 
             }
         };
+    }
+
+    resumeRestaurantsPosition(north, south, east, west) {
+        return config.get("foodology.restaurantes").map(r => {
+            const northPosition = north?.findIndex(t=>t===r.title);
+            const southPosition = south?.findIndex(t=>t===r.title);
+            const eastPosition = east?.findIndex(t=>t===r.title);
+            const westPosition = west?.findIndex(t=>t===r.title);
+            return {
+                restaurante: r.title,
+                position: (northPosition===-1?0:northPosition + southPosition===-1?0:southPosition + eastPosition===-1?0:eastPosition + westPosition===-1?0:westPosition)/4
+        }
+        });
     }
 }
 
